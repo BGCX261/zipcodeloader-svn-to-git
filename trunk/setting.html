@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<link  href="css/main.css" type="text/css" rel="stylesheet"rel="stylesheet" >
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>zipcodeloader</title>
+<script type="text/javascript">	
+</script>
+</head>
+<body>
+<h1>日本のzipcodeloader</h1>
+<h2>ファイルのアップロード</h2>
+<form method="POST" action="" enctype="multipart/form-data">
+    <input type="file"
+         name="FiletoUpload"
+         size="45">
+<input type="submit" value="アップロード!!!">
+</form>
+<table>
+{% for zipcode in zipcodes %}
+<tr>
+<td>{{zipcode.code}}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
